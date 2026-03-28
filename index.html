@@ -375,39 +375,6 @@
         });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    </script>  
-  <audio id="bg-music" loop>
-   <source src="https://files.catbox.moe/6v0z4v.mp3" type="audio/mpeg">
-</audio>
-
-<div id="music-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 10001; background: rgba(0,0,0,0.1); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.5s;">
-    <div style="background: rgba(255, 77, 77, 0.9); color: white; padding: 15px 25px; border-radius: 50px; font-family: 'Segoe UI', sans-serif; box-shadow: 0 10px 30px rgba(0,0,0,0.5); animation: pulse 2s infinite;">
-        🎵 Chạm nhẹ để mở nhạc lớp 12B11
-    </div>
-</div>
-
-<style>
-    @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.1); }
-        100% { transform: scale(1); }
-    }
-</style>
-
-<script>
-    const music = document.getElementById('bg-music');
-    const overlay = document.getElementById('music-overlay');
-
-    function startMusic() {
-        music.play().catch(e => console.log("Trình duyệt chờ tương tác..."));
-        overlay.style.opacity = '0';
-        setTimeout(() => {
-            overlay.style.display = 'none';
-        }, 500);
-    }
-
-    overlay.addEventListener('click', startMusic);
-    overlay.addEventListener('touchstart', startMusic);
-</script>
-</body>  
+    </script>
+</body>
 </html>
